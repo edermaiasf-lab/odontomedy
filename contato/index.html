@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contato | Odontomedy</title>
+    <meta name="description"
+        content="Entre em contato com a Odontomedy. Agende sua consulta ou exame radiológico em Morrinhos-GO." />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003087",
+                        "primary-dark": "#001f5c",
+                        "secondary": "#00A651",
+                        "accent": "#FFC72C",
+                        "alert": "#EF3340",
+                        "background-light": "#f5f8ff",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(16px);
+            background-color: rgba(255, 255, 255, 0.92);
+        }
+
+        .section-divider {
+            border-top: 4px solid #FFC72C;
+            width: 64px;
+            margin: 0.75rem auto 2rem;
+        }
+
+        @keyframes pulse-wa {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+            }
+
+            70% {
+                box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+            }
+        }
+
+        .pulse-wa {
+            animation: pulse-wa 2s infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 pt-20">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 glass-nav border-b-2 border-accent shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between relative">
+            <!-- Nome da Clínica -->
+            <a href="../index.html" class="flex items-center">
+                <span class="text-xl font-black text-primary tracking-tight">Odontomedy<span
+                        class="text-secondary">.</span></span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a class="text-sm font-semibold text-slate-700 hover:text-primary transition-colors"
+                    href="../index.html">Início</a>
+                <a class="text-sm font-semibold text-slate-700 hover:text-primary transition-colors"
+                    href="../sobre/index.html">Sobre</a>
+                <a class="text-sm font-semibold text-slate-700 hover:text-primary transition-colors"
+                    href="../especialidades/index.html">Especialidades</a>
+                <a class="text-sm font-semibold text-slate-700 hover:text-primary transition-colors"
+                    href="../equipe/index.html">Equipe</a>
+                <a class="text-sm font-semibold text-primary border-b-2 border-primary pb-0.5 transition-colors"
+                    href="../contato/index.html">Contato</a>
+            </nav>
+
+            <!-- Desktop CTA -->
+            <a href="https://wa.me/message/S2IMAZIPVY4SB1" target="_blank"
+                class="hidden lg:flex bg-secondary text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-green-700 transition-all shadow-lg items-center gap-2">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                </svg>
+                WhatsApp
+            </a>
+
+            <!-- Mobile Menu Toggles -->
+            <div class="flex items-center gap-4 lg:hidden">
+                <a href="https://wa.me/message/S2IMAZIPVY4SB1" target="_blank"
+                    class="bg-secondary text-white p-2 rounded-full shadow-lg">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                    </svg>
+                </a>
+                <button id="mobile-menu-btn" class="text-primary p-1 focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden fixed top-20 left-0 w-full bg-white border-b-2 border-accent shadow-xl py-6 px-4 z-40 animate-in slide-in-from-top duration-300">
+            <nav class="flex flex-col gap-4">
+                <a class="text-base font-bold text-slate-700 hover:text-primary py-2 border-b border-slate-50"
+                    href="../index.html">Início</a>
+                <a class="text-base font-bold text-slate-700 hover:text-primary py-2 border-b border-slate-50"
+                    href="../sobre/index.html">Sobre</a>
+                <a class="text-base font-bold text-slate-700 hover:text-primary py-2 border-b border-slate-50"
+                    href="../especialidades/index.html">Especialidades</a>
+                <a class="text-base font-bold text-slate-700 hover:text-primary py-2 border-b border-slate-50"
+                    href="../equipe/index.html">Equipe</a>
+                <a class="text-base font-bold text-slate-700 hover:text-primary py-2 border-b border-slate-50"
+                    href="../contato/index.html">Contato</a>
+                <a class="mt-4 bg-primary text-white py-3 rounded-full font-bold text-center shadow-lg"
+                    href="https://wa.me/message/S2IMAZIPVY4SB1" target="_blank">Agendar Consulta</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contato / Localização -->
+        <section class="py-24" id="contato">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-4">
+                    <span class="text-secondary font-bold text-sm uppercase tracking-widest">Atendimento</span>
+                    <h1 class="text-4xl font-black text-slate-900 mt-2 tracking-tight">Fale Conosco</h1>
+                </div>
+                <div class="section-divider"></div>
+
+                <div class="grid lg:grid-cols-2 gap-16 mt-12">
+                    <div class="space-y-6">
+                        <div
+                            class="flex gap-4 items-start p-6 bg-white shadow-sm border border-slate-100 rounded-xl hover:border-primary transition-colors">
+                            <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-white">call</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">Central de Agendamento</h4>
+                                <p class="text-slate-600 text-sm mb-3">Clínica Odontomedy & Radiologia Digital 3D</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="https://wa.me/message/S2IMAZIPVY4SB1" target="_blank"
+                                        class="inline-flex items-center gap-1 text-xs bg-secondary text-white px-3 py-1.5 rounded-full font-bold hover:bg-green-700 transition-all">
+                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                                            <path
+                                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                                        </svg>
+                                        WhatsApp Clínica
+                                    </a>
+                                    <a href="https://wa.me/message/6LPZ3N5NNCB7I1" target="_blank"
+                                        class="inline-flex items-center gap-1 text-xs bg-[#4A72FF] text-white px-3 py-1.5 rounded-full font-bold hover:bg-[#3256d6] transition-all">
+                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                                            <path
+                                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                                        </svg>
+                                        WhatsApp Radiologia
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex gap-4 items-start p-6 bg-white shadow-sm border border-slate-100 rounded-xl hover:border-primary transition-colors">
+                            <div class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-white">location_on</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">Endereço</h4>
+                                <p class="text-slate-600 text-sm">R. Manoel Lemos de Mendonça, Qd. 2 Lt. 5<br />Centro,
+                                    Morrinhos - GO, 75650-042</p>
+                                <a href="https://share.google/LwviHhIBUSvs6FU1A" target="_blank"
+                                    class="text-primary text-xs font-bold mt-2 inline-flex items-center gap-1 hover:underline">
+                                    <span class="material-symbols-outlined text-sm">open_in_new</span>Ver no Google Maps
+                                </a>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex gap-4 items-start p-6 bg-white shadow-sm border border-slate-100 rounded-xl hover:border-primary transition-colors">
+                            <div class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-white">mail</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">E-mail</h4>
+                                <p class="text-slate-600 text-sm mb-1">Dúvidas ou parcerias institucionais</p>
+                                <a href="mailto:odontomedy@hotmail.com"
+                                    class="text-primary font-bold text-sm hover:underline">
+                                    odontomedy@hotmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex gap-4 items-start p-6 bg-white shadow-sm border border-slate-100 rounded-xl hover:border-primary transition-colors">
+                            <div class="w-12 h-12 bg-accent rounded-xl flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-slate-800">schedule</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-2">Horário de Atendimento</h4>
+                                <div class="text-sm text-slate-600 space-y-1">
+                                    <p><span class="font-semibold">Seg a Sex:</span> 07:00–11:30 / 13:00–19:00</p>
+                                    <p><span class="font-semibold">Sábado:</span> 08:00–12:00</p>
+                                    <p><span class="text-alert font-semibold">Domingo:</span> Fechado</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Mapa Interativo do Google -->
+                    <div
+                        class="rounded-2xl overflow-hidden shadow-sm h-[450px] lg:h-auto border border-slate-200 flex relative isolate">
+                        <div class="absolute inset-0 bg-slate-50 flex items-center justify-center -z-10">
+                            <span class="material-symbols-outlined text-slate-300 text-4xl animate-pulse">map</span>
+                        </div>
+                        <iframe
+                            src="https://maps.google.com/maps?q=-17.7344939,-49.112613&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="flex-1 w-full min-h-[450px]">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark text-white pt-16 pb-24 border-t-4 border-accent">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-10 mb-12">
+                <div>
+                    <h3 class="text-2xl font-black text-white tracking-tight leading-none mb-4">Odontomedy<span
+                            class="text-secondary">.</span></h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Cuidado integral multidisciplinar para toda a sua
+                        família. Odontologia, medicina, radiologia e muito mais.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-accent">Especialidades</h4>
+                    <ul class="space-y-2 text-white/70 text-sm" id="footer-especialidades">
+                        <li>Odontologia Especializada</li>
+                        <li>Radiologia Digital 3D</li>
+                        <li>Clínica Médica</li>
+                        <li>Psiquiatria e Psicologia</li>
+                        <li>Dermatologia</li>
+                        <li>Nutrição</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-accent">Contato</h4>
+                    <div class="space-y-3 text-sm text-white/70">
+                        <p><span class="text-white font-semibold">WhatsApp:</span> (64) 98412-6400</p>
+                        <p><span class="text-white font-semibold">E-mail:</span> <a href="mailto:odontomedy@hotmail.com"
+                                class="hover:text-accent transition-colors">odontomedy@hotmail.com</a></p>
+                        <p><a href="http://www.odontomedy.com.br" target="_blank"
+                                class="text-accent hover:underline">www.odontomedy.com.br</a></p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-white/40">
+                <p>© 2026 Odontomedy - Moderno Centro Médico, Odontológico e Radiológico. Todos os direitos reservados.
+                </p>
+                <p>Desenvolvido por <a href="https://nexoraagencia.com.br" target="_blank"
+                        class="text-accent font-semibold hover:text-white transition-colors">Nexora Digital</a></p>
+            </div>
+            <div
+                class="border-t border-white/10 pt-4 mt-6 flex flex-wrap justify-center items-center gap-2 text-[13px] text-white/50">
+                <a href="../privacidade/index.html"
+                    class="hover:text-white hover:opacity-100 transition-colors">Política de
+                    Privacidade</a>
+                <span>&middot;</span>
+                <a href="../termos/index.html" class="hover:text-white hover:opacity-100 transition-colors">Termos de
+                    Uso</a>
+                <span>&middot;</span>
+                <a href="../politica-de-cookies/index.html"
+                    class="hover:text-white hover:opacity-100 transition-colors">Política de Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/dados.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

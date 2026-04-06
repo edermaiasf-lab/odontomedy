@@ -1,0 +1,562 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nossa Equipe | Odontomedy</title>
+    <meta name="description"
+        content="Conheça os profissionais multidisciplinares da Odontomedy: dentistas, médica, psiquiatra, psicóloga, dermatologista, nutricionista e técnicos." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { "primary": "#003087", "primary-dark": "#001f5c", "secondary": "#00A651", "accent": "#FFC72C", "alert": "#EF3340" },
+                    fontFamily: { "display": ["Inter", "sans-serif"] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(16px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        .prof-card {
+            transition: all 0.25s ease;
+        }
+
+        .prof-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px rgba(0, 48, 135, 0.12);
+        }
+
+        .section-divider {
+            border-top: 4px solid #FFC72C;
+            width: 64px;
+            margin: 0.75rem auto 2rem;
+        }
+
+        @keyframes pulse-wa {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+            }
+
+            70% {
+                box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+            }
+        }
+
+        .pulse-wa {
+            animation: pulse-wa 2s infinite;
+        }
+
+        .avatar-placeholder {
+            background: linear-gradient(135deg, #003087 0%, #00A651 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 glass-nav border-b-2 border-accent shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between relative">
+            <!-- Nome da Clínica -->
+            <a href="../index.html" class="flex items-center">
+                <span class="text-xl font-black text-primary tracking-tight">Odontomedy<span
+                        class="text-secondary">.</span></span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a class="text-sm font-semibold text-slate-700 hover:text-primary transition-colors"
+                    href="../index.html">Início</a>
+                <a class="text-sm font-semibold text-slate-700 hover:text-primary transition-colors"
+                    href="../sobre/index.html">Sobre</a>
+                <a class="text-sm font-semibold text-slate-700 hover:text-primary transition-colors"
+                    href="../especialidades/index.html">Especialidades</a>
+                <a class="text-sm font-semibold text-primary border-b-2 border-primary pb-0.5"
+                    href="../equipe/index.html">Equipe</a>
+                <a class="text-sm font-semibold text-slate-700 hover:text-primary transition-colors"
+                    href="../contato/index.html">Contato</a>
+            </nav>
+
+            <!-- Desktop CTA -->
+            <a href="https://wa.me/message/S2IMAZIPVY4SB1" target="_blank"
+                class="hidden lg:flex bg-secondary text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-green-700 transition-all shadow-lg items-center gap-2 dynamic-wa-link">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                </svg>
+                WhatsApp
+            </a>
+
+            <!-- Mobile Menu Toggles -->
+            <div class="flex items-center gap-4 lg:hidden">
+                <a href="https://wa.me/message/S2IMAZIPVY4SB1" target="_blank"
+                    class="bg-secondary text-white p-2 rounded-full shadow-lg dynamic-wa-link">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                    </svg>
+                </a>
+                <button id="mobile-menu-btn" class="text-primary p-1 focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden fixed top-20 left-0 w-full bg-white border-b-2 border-accent shadow-xl py-6 px-4 z-40 animate-in slide-in-from-top duration-300">
+            <nav class="flex flex-col gap-4">
+                <a class="text-base font-bold text-slate-700 hover:text-primary py-2 border-b border-slate-50"
+                    href="../index.html">Início</a>
+                <a class="text-base font-bold text-slate-700 hover:text-primary py-2 border-b border-slate-50"
+                    href="../sobre/index.html">Sobre</a>
+                <a class="text-base font-bold text-slate-700 hover:text-primary py-2 border-b border-slate-50"
+                    href="../especialidades/index.html">Especialidades</a>
+                <a class="text-base font-bold text-slate-700 hover:text-primary py-2 border-b border-slate-50"
+                    href="../equipe/index.html">Equipe</a>
+                <a class="text-base font-bold text-slate-700 hover:text-primary py-2 border-b border-slate-50"
+                    href="../contato/index.html">Contato</a>
+                <a class="mt-4 bg-primary text-white py-3 rounded-full font-bold text-center shadow-lg dynamic-wa-link"
+                    href="https://wa.me/message/S2IMAZIPVY4SB1" target="_blank">Agendar Consulta</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-12 bg-primary text-white">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <span class="inline-block text-accent font-bold text-sm uppercase tracking-widest mb-3">Alto nível
+                técnico</span>
+            <h1 class="text-4xl lg:text-5xl font-black mb-4">Nossa Equipe</h1>
+            <div class="section-divider"></div>
+            <p class="text-white/80 text-lg max-w-2xl mx-auto">Conheça os profissionais que cuidam da sua saúde. Clique
+                em um profissional para ver seu perfil completo e agendar com ele.</p>
+        </div>
+    </section>
+
+    <!-- Filtros -->
+    <section class="py-6 bg-white border-b border-slate-100 sticky top-20 z-40">
+        <div class="max-w-7xl mx-auto px-4 flex flex-wrap gap-3 justify-center">
+            <button onclick="filtrar('todos')"
+                class="filtro active px-5 py-2 rounded-full text-sm font-bold transition-all bg-primary text-white"
+                data-filtro="todos">Todos</button>
+            <button onclick="filtrar('dentista')"
+                class="filtro px-5 py-2 rounded-full text-sm font-bold transition-all bg-slate-100 text-slate-700 hover:bg-primary hover:text-white"
+                data-filtro="dentista">Odontologia</button>
+            <button onclick="filtrar('medico')"
+                class="filtro px-5 py-2 rounded-full text-sm font-bold transition-all bg-slate-100 text-slate-700 hover:bg-primary hover:text-white"
+                data-filtro="medico">Medicina</button>
+            <button onclick="filtrar('saude-mental')"
+                class="filtro px-5 py-2 rounded-full text-sm font-bold transition-all bg-slate-100 text-slate-700 hover:bg-primary hover:text-white"
+                data-filtro="saude-mental">Saúde Mental</button>
+            <button onclick="filtrar('tec-radiologia')"
+                class="filtro px-5 py-2 rounded-full text-sm font-bold transition-all bg-slate-100 text-slate-700 hover:bg-primary hover:text-white"
+                data-filtro="tec-radiologia">Téc. Radiologia</button>
+            <button onclick="filtrar('tpd')"
+                class="filtro px-5 py-2 rounded-full text-sm font-bold transition-all bg-slate-100 text-slate-700 hover:bg-primary hover:text-white"
+                data-filtro="tpd">Téc. Prótese Dentária</button>
+            <button onclick="filtrar('nutricionista')"
+                class="filtro px-5 py-2 rounded-full text-sm font-bold transition-all bg-slate-100 text-slate-700 hover:bg-primary hover:text-white"
+                data-filtro="nutricionista">Nutricionista</button>
+        </div>
+    </section>
+
+    <!-- Grid da equipe -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="equipe-grid-static">
+                <!-- Profissional 1 -->
+                <a href="claudio-daniel-serafim.html"
+                    class="prof-card bg-white rounded-2xl p-6 shadow-sm border-2 border-accent block"
+                    data-categoria="dentista">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden avatar-placeholder flex items-center justify-center">
+                        <img src="../img/Dr.Claudio/Dr.%20Claudio%202.jpeg" alt="Dr. Cláudio Daniel Serafim"
+                            class="w-full h-full object-cover contrast-105 saturate-110 brightness-105"
+                            style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; transform: translateZ(0);">
+                    </div>
+                    <div class="text-center">
+                        <span
+                            class="inline-block bg-accent text-slate-900 text-xs font-bold px-3 py-1 rounded-full mb-2">R.T.
+                            da Clínica</span>
+                        <h3 class="font-bold text-slate-900 text-base leading-tight">Dr. Cláudio Daniel Serafim</h3>
+                        <p class="text-primary text-sm font-semibold mt-1">Cirurgião-Dentista</p>
+                        <p class="text-slate-400 text-xs mt-1">CRO-GO 4788</p>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-primary text-xs font-bold flex items-center gap-1">Ver perfil <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </a>
+
+                <!-- Profissional 2 -->
+                <a href="ana-angelica-amaral.html"
+                    class="prof-card bg-white rounded-2xl p-6 shadow-sm border border-slate-100 block"
+                    data-categoria="medico">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden avatar-placeholder flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl">person</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-slate-900 text-base leading-tight">Dra. Ana Angélica Paiva O. Amaral
+                        </h3>
+                        <p class="text-primary text-sm font-semibold mt-1">Clínica Médica</p>
+                        <p class="text-slate-400 text-xs mt-1">CRM-GO 33585</p>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-primary text-xs font-bold flex items-center gap-1">Ver perfil <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </a>
+
+                <!-- Profissional 3 -->
+                <a href="brayan-silveira.html"
+                    class="prof-card bg-white rounded-2xl p-6 shadow-sm border border-slate-100 block"
+                    data-categoria="dentista">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden avatar-placeholder flex items-center justify-center">
+                        <img src="../img/Dr.%20Brayan%20In%C3%A1cio%20Apolin%C3%A1rio%20da%20Silveira/Dr.%20Brayan%20In%C3%A1cio%20Apolin%C3%A1rio%20da%20Silveira.jpeg"
+                            alt="Dr. Brayan Inácio Apolinário Silveira"
+                            class="w-full h-full object-cover contrast-105 saturate-110 brightness-105"
+                            style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; transform: translateZ(0);">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-slate-900 text-base leading-tight">Dr. Brayan Inácio Apolinário
+                            Silveira</h3>
+                        <p class="text-primary text-sm font-semibold mt-1">Cirurgião-Dentista</p>
+                        <p class="text-slate-400 text-xs mt-1">CRO-GO 24673</p>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-primary text-xs font-bold flex items-center gap-1">Ver perfil <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </a>
+
+                <!-- Profissional 4 -->
+                <a href="bruna-teixeira.html"
+                    class="prof-card bg-white rounded-2xl p-6 shadow-sm border border-slate-100 block"
+                    data-categoria="medico">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden avatar-placeholder flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl">person</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-slate-900 text-base leading-tight">Dra. Bruna Timóteo Teixeira</h3>
+                        <p class="text-primary text-sm font-semibold mt-1">Enfermeira</p>
+                        <p class="text-slate-400 text-xs mt-1">COREN-GO 951804</p>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-primary text-xs font-bold flex items-center gap-1">Ver perfil <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </a>
+
+                <!-- Profissional 5 -->
+                <a href="celio-barros.html"
+                    class="prof-card bg-white rounded-2xl p-6 shadow-sm border border-slate-100 block"
+                    data-categoria="saude-mental">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden avatar-placeholder flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl">person</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-slate-900 text-base leading-tight">Dr. Célio Ribeiro de Barros</h3>
+                        <p class="text-primary text-sm font-semibold mt-1">Psiquiatra</p>
+                        <p class="text-slate-400 text-xs mt-1">CRM-GO 9841</p>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-primary text-xs font-bold flex items-center gap-1">Ver perfil <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </a>
+
+                <!-- Profissional 6 -->
+                <a href="coraci-campos.html"
+                    class="prof-card bg-white rounded-2xl p-6 shadow-sm border border-slate-100 block"
+                    data-categoria="saude-mental">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden avatar-placeholder flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl">person</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-slate-900 text-base leading-tight">Dra. Coraci Valéria M. Campos</h3>
+                        <p class="text-primary text-sm font-semibold mt-1">Psicóloga</p>
+                        <p class="text-slate-400 text-xs mt-1">CRP-GO 3309</p>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-primary text-xs font-bold flex items-center gap-1">Ver perfil <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </a>
+
+                <!-- Profissional 7 -->
+                <a href="gorelio-santos.html"
+                    class="prof-card bg-white rounded-2xl p-6 shadow-sm border border-slate-100 block"
+                    data-categoria="nutricionista">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden avatar-placeholder flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl">person</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-slate-900 text-base leading-tight">Dr. Gorélio Horácio Ferreira Santos
+                        </h3>
+                        <p class="text-primary text-sm font-semibold mt-1">Nutricionista</p>
+                        <p class="text-slate-400 text-xs mt-1">CRN-GO P/21242</p>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-primary text-xs font-bold flex items-center gap-1">Ver perfil <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </a>
+
+                <!-- Profissional 8 -->
+                <a href="herman-dutra.html"
+                    class="prof-card bg-white rounded-2xl p-6 shadow-sm border border-slate-100 block"
+                    data-categoria="medico">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden avatar-placeholder flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl">person</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-slate-900 text-base leading-tight">Dr. Herman Silveira Dutra</h3>
+                        <p class="text-primary text-sm font-semibold mt-1">Dermatologista</p>
+                        <p class="text-slate-400 text-xs mt-1">CRM-GO 9022</p>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-primary text-xs font-bold flex items-center gap-1">Ver perfil <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </a>
+
+                <!-- Profissional 9 -->
+                <a href="mariana-pantaleao.html"
+                    class="prof-card bg-white rounded-2xl p-6 shadow-sm border border-slate-100 block"
+                    data-categoria="dentista">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden avatar-placeholder flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl">person</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-slate-900 text-base leading-tight">Dra. Mariana A. Ribeiro Pantaleão
+                        </h3>
+                        <p class="text-primary text-sm font-semibold mt-1">Cirurgiã-Dentista</p>
+                        <p class="text-slate-400 text-xs mt-1">CRO-GO 19836</p>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-primary text-xs font-bold flex items-center gap-1">Ver perfil <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </a>
+
+                <!-- Profissional 10 -->
+                <a href="michelle-vale.html"
+                    class="prof-card bg-white rounded-2xl p-6 shadow-sm border border-slate-100 block"
+                    data-categoria="dentista">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden avatar-placeholder flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl">person</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-slate-900 text-base leading-tight">Dra. Michelle Alves do Vale</h3>
+                        <p class="text-primary text-sm font-semibold mt-1">Endodontista</p>
+                        <p class="text-slate-400 text-xs mt-1">CRO-GO 18132</p>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-primary text-xs font-bold flex items-center gap-1">Ver perfil <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </a>
+
+                <!-- Profissional 11 -->
+                <a href="pryscylla-rosa.html"
+                    class="prof-card bg-white rounded-2xl p-6 shadow-sm border border-slate-100 block"
+                    data-categoria="dentista">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden avatar-placeholder flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl">person</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-slate-900 text-base leading-tight">Dra. Pryscylla Gonçalves Rosa</h3>
+                        <p class="text-primary text-sm font-semibold mt-1">Cirurgiã-Dentista</p>
+                        <p class="text-slate-400 text-xs mt-1">CRO-GO 22115</p>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-primary text-xs font-bold flex items-center gap-1">Ver perfil <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </a>
+
+                <!-- Profissional Dra. Silvia Nunes -->
+                <a href="silvia-nunes.html"
+                    class="prof-card bg-white rounded-2xl p-6 shadow-sm border border-slate-100 block"
+                    data-categoria="dentista">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden avatar-placeholder flex items-center justify-center">
+                        <img src="../img/Dra.%20Silvia%20Nunes/Dra.%20Silvia%20Nunes2.jpeg" alt="Dra. Silvia Nunes Dias"
+                            class="w-full h-full object-cover contrast-105 saturate-110 brightness-105"
+                            style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; transform: translateZ(0);">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-slate-900 text-base leading-tight">Dra. Silvia Nunes Dias</h3>
+                        <p class="text-primary text-sm font-semibold mt-1">Clínico Geral</p>
+                        <p class="text-slate-400 text-xs mt-1">CRO-GO 9751</p>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-primary text-xs font-bold flex items-center gap-1">Ver perfil <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </a>
+
+                <!-- Profissional 12 -->
+                <a href="jener-serafim.html"
+                    class="prof-card bg-white rounded-2xl p-6 shadow-sm border border-slate-100 block"
+                    data-categoria="tec-radiologia">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden avatar-placeholder flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl">person</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-slate-900 text-base leading-tight">Tec. Rad. Jener José Serafim</h3>
+                        <p class="text-primary text-sm font-semibold mt-1">Téc. Radiologia</p>
+                        <p class="text-slate-400 text-xs mt-1">CRTR-GO 958</p>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-primary text-xs font-bold flex items-center gap-1">Ver perfil <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </a>
+
+                <!-- Profissional 13 -->
+                <a href="rivia-santos.html"
+                    class="prof-card bg-white rounded-2xl p-6 shadow-sm border border-slate-100 block"
+                    data-categoria="tpd">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden avatar-placeholder flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl">person</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-slate-900 text-base leading-tight">TPD. Rívia Serafim Santos</h3>
+                        <p class="text-primary text-sm font-semibold mt-1">Téc. Prótese Dentária</p>
+                        <p class="text-slate-400 text-xs mt-1">CRO-GO 353</p>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-primary text-xs font-bold flex items-center gap-1">Ver perfil <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </a>
+
+                <!-- Profissional 14 -->
+                <a href="vitoria-mendes.html"
+                    class="prof-card bg-white rounded-2xl p-6 shadow-sm border border-slate-100 block"
+                    data-categoria="dentista">
+                    <div
+                        class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden avatar-placeholder flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl">person</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-slate-900 text-base leading-tight">Dra. Vitória Karoliny Mendes</h3>
+                        <p class="text-primary text-sm font-semibold mt-1">Cirurgiã-Dentista</p>
+                        <p class="text-slate-400 text-xs mt-1">CRO-GO 22684</p>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-primary text-xs font-bold flex items-center gap-1">Ver perfil <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8 mt-4">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+            <div class="flex items-center gap-2">
+                <span class="text-xl font-black text-white tracking-tight">Odontomedy<span
+                        class="text-secondary">.</span></span>
+            </div>
+            <p class="text-white/60">© 2026 Odontomedy. Desenvolvido por <a href="https://nexoraagencia.com.br"
+                    target="_blank" class="text-accent font-semibold hover:text-white transition-colors">Nexora
+                    Digital</a></p>
+            <a href="../index.html" class="text-accent font-semibold hover:underline flex items-center gap-1">
+                <span class="material-symbols-outlined text-base">arrow_back</span> Voltar ao início
+            </a>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-4 border-t border-white/10 pt-4 mt-6 flex flex-wrap justify-center items-center gap-2 text-[13px] text-white/50">
+            <a href="../privacidade/index.html" class="hover:text-white hover:opacity-100 transition-colors">Política de
+                Privacidade</a>
+            <span>&middot;</span>
+            <a href="../termos/index.html" class="hover:text-white hover:opacity-100 transition-colors">Termos de
+                Uso</a>
+            <span>&middot;</span>
+            <a href="../politica-de-cookies/index.html"
+                class="hover:text-white hover:opacity-100 transition-colors">Política
+                de Cookies</a>
+        </div>
+    </footer>
+
+    <!-- WhatsApp flutuante -->
+    <a href="https://wa.me/message/S2IMAZIPVY4SB1" target="_blank"
+        class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform pulse-wa dynamic-wa-link">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+    </a>
+
+    <script>
+        function filtrar(categoria) {
+            document.querySelectorAll('.filtro').forEach(btn => {
+                btn.classList.remove('bg-primary', 'text-white');
+                btn.classList.add('bg-slate-100', 'text-slate-700');
+            });
+            const active = document.querySelector(`[data-filtro="${categoria}"]`);
+            if (active) {
+                active.classList.add('bg-primary', 'text-white');
+                active.classList.remove('bg-slate-100', 'text-slate-700');
+            }
+
+            document.querySelectorAll('[data-categoria]').forEach(card => {
+                if (categoria === 'todos' || card.dataset.categoria === categoria) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const cat = params.get('categoria');
+            if (cat) {
+                filtrar(cat);
+                setTimeout(() => {
+                    const grid = document.getElementById('equipe-grid');
+                    if (grid) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 300);
+            }
+        });
+    </script>
+    <!-- Scripts -->
+    <script src="../js/dados.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
