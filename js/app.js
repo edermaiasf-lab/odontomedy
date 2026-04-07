@@ -1,11 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Atualizar Título e Slogan
-    const siteTitle = document.querySelector('title');
-    if (siteTitle) siteTitle.textContent = `${CLINICA_DADOS.identidade.nome} | ${CLINICA_DADOS.identidade.slogan}`;
+    // 1. Mobile Menu Toggle - MOVED TO TOP FOR ROBUSTNESS
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-    // 2. Renderizar Serviços (Tratamentos)
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-3xl">close</span>';
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-3xl">menu</span>';
+            }
+        });
+
+        // Close menu on link click
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-3xl">menu</span>';
+            });
+        });
+    }
+
+    // 2. Atualizar Título e Slogan
+    const siteTitle = document.querySelector('title');
+    if (siteTitle && typeof CLINICA_DADOS !== 'undefined') {
+        siteTitle.textContent = `${CLINICA_DADOS.identidade.nome} | ${CLINICA_DADOS.identidade.slogan}`;
+    }
+
+    // 3. Renderizar Serviços (Tratamentos)
     const tratamentosGrid = document.getElementById('tratamentos-grid');
-    if (tratamentosGrid) {
+    if (tratamentosGrid && typeof CLINICA_DADOS !== 'undefined') {
         tratamentosGrid.innerHTML = '';
         const isSubDir = window.location.pathname.match(/\/(sobre|contato|especialidades|equipe)\//);
         const prefixoLink = isSubDir ? '../equipe/' : 'equipe/';
@@ -25,9 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. Renderizar Corpo Clínico
+    // 4. Renderizar Corpo Clínico
     const equipeGrid = document.getElementById('equipe-grid');
-    if (equipeGrid) {
+    if (equipeGrid && typeof CLINICA_DADOS !== 'undefined') {
         // Se estiver na Home Page, mostra apenas os destaques e corta para 3
         const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/';
         const isEquipeFolder = window.location.pathname.includes('equipe');
@@ -79,25 +107,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Atualizar Links de Contato
-    const waNumber = CLINICA_DADOS.contato.whatsapp[0].replace(/\D/g, ''); // 64984126400
+    // 5. Atualizar Links de Contato
+    if (typeof CLINICA_DADOS !== 'undefined') {
+        const phoneDisplayContainers = document.querySelectorAll('.dynamic-phone-display');
+        phoneDisplayContainers.forEach(container => {
+            container.innerHTML = CLINICA_DADOS.contato.telefones.join('<br/>') + '<br/>' + CLINICA_DADOS.contato.whatsapp.map(w => w + ' (WhatsApp)').join('<br/>');
+        });
+    }
 
-    // NOTA: A rotina que sobrescrevia .dynamic-wa-link foi removida 
-    // porque agora utilizamos links diretos da API do WhatsApp (wa.me/message/...)
-    // com mensagens personalizadas em cada página, conforme definido no HTML.
-
-    const phoneDisplayContainers = document.querySelectorAll('.dynamic-phone-display');
-    phoneDisplayContainers.forEach(container => {
-        container.innerHTML = CLINICA_DADOS.contato.telefones.join('<br/>') + '<br/>' + CLINICA_DADOS.contato.whatsapp.map(w => w + ' (WhatsApp)').join('<br/>');
-    });
-
-    // 5. Build dynamic footer links for Especialidades
+    // 6. Build dynamic footer links for Especialidades
     const footerEspecialidades = document.getElementById('footer-especialidades');
-    if (footerEspecialidades) {
-        const isEquipeOrOutros = window.location.pathname.includes('equipe') || window.location.pathname.includes('sobre') || window.location.pathname.includes('especialidades') || window.location.pathname.includes('contato');
-        // Calculate relative prefix to 'equipe/' depending on depth
-        // If we are in essentially any subdirectory (depth 1), the path to equipe is '../equipe/index.html'
-        // If we are in depth 0, it's 'equipe/index.html'
+    if (footerEspecialidades && typeof CLINICA_DADOS !== 'undefined') {
         const isSubDir = window.location.pathname.match(/\/(sobre|contato|especialidades|equipe)\//);
         const prefixLink = isSubDir ? '../equipe/' : 'equipe/';
 
@@ -111,16 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 
-    // 6. Cookie Consent Banner (LGPD)
+    // 7. Cookie Consent Banner (LGPD)
     const cookieConsentKey = "odontomedy_cookie_consent";
     const hasConsent = localStorage.getItem(cookieConsentKey);
 
     if (!hasConsent) {
-        // Calculate path to root or specific legal pages
         const isSubDirLegal = window.location.pathname.match(/\/(sobre|contato|especialidades|equipe|privacidade|termos|politica-de-cookies)\//);
         const prefixLinkCookies = isSubDirLegal ? '../' : '';
 
-        // Define banner HTML
         const bannerHTML = `
             <div id="lgpd-banner" class="fixed bottom-0 left-0 w-full bg-[#0A1F5C] text-white p-4 md:py-4 md:px-8 z-[9999] shadow-2xl transition-transform duration-400 ease-in-out transform translate-y-full flex flex-col md:flex-row items-center justify-between gap-4 font-display text-[14px]">
                 <div class="flex-1 text-center md:text-left leading-relaxed">
@@ -138,51 +156,27 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
 
-        // Append to body
         document.body.insertAdjacentHTML('beforeend', bannerHTML);
         const bannerEl = document.getElementById('lgpd-banner');
 
-        // Slide up after 1.5s
         setTimeout(() => {
-            bannerEl.classList.remove('translate-y-full');
-            bannerEl.classList.add('translate-y-0');
+            if (bannerEl) {
+                bannerEl.classList.remove('translate-y-full');
+                bannerEl.classList.add('translate-y-0');
+            }
         }, 1500);
 
-        // Handle clicks
         const closeBanner = (consentValue) => {
             localStorage.setItem(cookieConsentKey, consentValue);
             bannerEl.classList.remove('translate-y-0');
             bannerEl.classList.add('translate-y-full');
-            setTimeout(() => bannerEl.remove(), 400); // Wait for transition
+            setTimeout(() => bannerEl.remove(), 400);
         };
 
-        document.getElementById('btn-aceitar-cookies').addEventListener('click', () => closeBanner('true'));
-        document.getElementById('btn-recusar-cookies').addEventListener('click', () => closeBanner('false'));
+        const btnAccept = document.getElementById('btn-aceitar-cookies');
+        const btnReject = document.getElementById('btn-recusar-cookies');
+        if (btnAccept) btnAccept.addEventListener('click', () => closeBanner('true'));
+        if (btnReject) btnReject.addEventListener('click', () => closeBanner('false'));
     }
 
-    // 7. Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
-            const isHidden = mobileMenu.classList.contains('hidden');
-            if (isHidden) {
-                mobileMenu.classList.remove('hidden');
-                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-3xl">close</span>';
-            } else {
-                mobileMenu.classList.add('hidden');
-                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-3xl">menu</span>';
-            }
-        });
-
-        // Close menu on link click
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-3xl">menu</span>';
-            });
-        });
-    }
 });
