@@ -1,0 +1,11 @@
+.git
+.gitignore
+.assetsignore
+.claude
+.wrangler
+.vscode
+node_modules
+wrangler.jsonc
+*.zip
+.DS_Store
+Thumbs.db
